@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Piccola piano</title>
+    <meta name="description" content="南区桂川にあるピアノ教室">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Walter+Turncoat&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
+    <!-- Slickの基本CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- SlickのテーマCSS（ドットや矢印のスタイルが含まれる） -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- jQuery（slick.jsより先） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick.js -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Google reCAPTCHA 導入（v2） -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="site-title"><a href="#header"><img src="img/web-logo.png" alt="logo"></a></h1>
+        <nav id="header-navi">
+            <ul>
+                <li><a href="#menu">menu</a></li>
+                <li><a href="#do">about</a></li>
+                <li><a href="#footer">access</a></li>
+            </ul>
+        </nav>
+        <div class="header-sns">
+            <div class="btn line"><a href="https://lin.ee/o9bziWy"><img src="img/line.png" alt="line-icon"></a></div>
+            <div class="btn instagram"><a href="#"><img src="img/instagram.png" alt="instagram-icon"></a></div>
+        </div>
+    </header>
+    <main>
+        <section id="main-visual">
+            <img src="img/main-pc.jpg" alt="main-visual">
+        </section>
+        <section id="menu">
+            <div class="piano-container">
+                <div class="piano-wrap">
+                    <div class="piano-key do white-key vertical-rotated">
+                        <a href="#do">
+                            <span>ど</span>
+                            <span>ん</span>
+                            <span>な</span>
+                            <span>と</span>
+                            <span>こ</span>
+                            <span>ろ</span>
+                            <span>？</span><br>
+                            <span>ど</span>
+                            <span>ん</span>
+                            <span>な</span>
+                            <span>ひ</span>
+                            <span>と</span>
+                            <span>？</span>
+                        </a>
+                    </div><!-- ド -->
+                    <div class="piano-key black-key"></div><!-- ド# -->
+                    <div class="piano-key re white-key vertical-rotated">
+                        <a href="#re">
+                            <span>レ</span>
+                            <span>ッ</span>
+                            <span>ス</span>
+                            <span>ン</span>
+                            <span>カ</span>
+                            <span>レ</span>
+                            <span>ン</span>
+                            <span>ダ</span>
+                            <span>ー</span><br>
+                            <span>体</span>
+                            <span>験</span>
+                            <span>レ</span>
+                            <span>ッ</span>
+                            <span>ス</span>
+                            <span>ン</span>
+                        </a>
+                    </div><!-- レ -->
+                    <div class="piano-key black-key"></div><!-- レ# -->
+                    <div class="piano-key mi white-key vertical-rotated">
+                        <a href="#mi">
+                            <span>み</span>
+                            <span>ん</span>
+                            <span>な</span>
+                            <span>の</span>
+                            <span>様</span>
+                            <span>子</span>
+                        </a>
+                    </div><!-- ミ -->
+                    <div class="piano-key fa white-key vertical-rotated">
+                        <a href="#fa">
+                            <span>フ</span>
+                            <span>ァ</span>
+                            <span>イ</span>
+                            <span>ル</span>
+                            <span>の</span><br>
+                            <span>ダ</span>
+                            <span>ウ</span>
+                            <span>ン</span>
+                            <span>ロ</span>
+                            <span>ー</span>
+                            <span>ド</span>
+                        </a>
+                    </div><!-- ファ -->
+                    <div class="piano-key black-key"></div><!-- ファ# -->
+                    <div class="piano-key so white-key vertical-rotated">
+                        <a href="#so">
+                            <span>相</span>
+                            <span>談</span>
+                            <span>室</span>
+                        </a>
+                    </div><!-- ソ -->
+                    <div class="piano-key black-key"></div><!-- ソ# -->
+                    <div class="piano-key la white-key vertical-rotated">
+                        <a href="#la">
+                            <span>ラ</span>
+                            <span>イ</span>
+                            <span>ブ</span>
+                            <span>ラ</span>
+                            <span>リ</span>
+                            <span>ー</span>
+                        </a>
+                    </div><!-- ラ -->
+                    <div class="piano-key black-key"></div><!-- ラ# -->
+                    <div class="piano-key si white-key vertical-rotated">
+                        <a href="#si">
+                            <span>し</span>
+                            <span>ら</span>
+                            <span>せ</span>
+                        </a>
+                    </div><!-- シ -->
+                </div>
+            </div>
+        </section>
+        <section id="do" class="accordion-item">
+            <img src="img/menu-do.jpg" alt="どんなところ？どんなひと？">
+            <div id="about">
+                <div class="article">
+                    <article>
+                        <img src="img/teacher.png" alt="teacher">
+                        <div class="text">
+                            <h2 class="article-title">「音を楽しむ」こと、「表現する」こと、そして「小さな積み重ね」が生む成長のよろこび──</h2>
+                            <p><span>Piccola Piano</span>は、子どもたちが音楽を通じて心を育て自分らしさを表現できる場所をめざしています。</p>
+                            <p>毎日の練習は、たった1分でもかまいません。大切なのは「続けること」そして「できた!」という小さな達成感の積み重ねです。その一歩一歩が、きっと未来の自信につながっていきます。
+                            </p>
+                            <p>音楽の森に住む動物たちが、ピアノの音に耳をすませにやってくるように、この教室も、子どもたちが自然に集まり、安心して通える、そんなあたたかな場所でありたいと願っています。</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="img/teacher_2.PNG" alt="teacher_2">
+                        <div class="text">
+                            <h2 class="article-title">講師プロフィールとごあいさつ──</h2>
+                            <p>2016年 京都華頂女子高等学校 音楽学科ピアノコース 卒業<br>2020年 沖縄県立芸術大学 音楽学部 音楽学科 音楽表現専攻 ピアノコース 卒業</p>
+                            <p>大学卒業後は一度、一般企業に就職しましたが、ピアノのない生活にどこか違和感を抱き続けていました。</p>
+                            <p>「音楽にふれ、誰かと分かち合うことの喜び」を大切にしたいという思いから2021年の冬、京都府向日市の自宅で小さなピアノ教室を開講しました。<br>
+                                子どもたちにピアノの楽しさを伝える日々の中で、気づけば私のほうがたくさんのことを子どもたちから学んでいたように思います。</p>
+                            <p>その後、家庭の事情により向日市の教室は閉じることとなりましたが、このたび、桂川の地で新しく「<span>Piccola Piano</span>」教室を開講する運びとなりました。
+                            </p>
+                            <p>現在、私自身も一人の母として子育てをしています。だからこそピアノのレッスンを通して、お子さまがどのようなことに取り組み、どんなことに成長を感じているのか。ご家庭でも共有していただけるよう、保護者の方とのコミュニケーションを大切にした運営を心がけております。
+                            </p>
+                            <p>ピアノが「好き」という気持ちを大切にしながら、一人ひとりの歩幅で、音楽とともに豊かな時間を育んでいけたら嬉しいです。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="re" class="accordion-item">
+            <img src="img/menu-re.jpg" alt="レッスンカレンダー・体験レッスン">
+            <div class="calendar">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.7425075983997!2d135.705423825756!3d34.963061922827706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010685b28eab59%3A0x60e66b8154d122bf!2z44Kk44Kq44Oz44Oi44O844Or5Lqs6YO95qGC5bed!5e0!3m2!1sja!2sjp!4v1750334797333!5m2!1sja!2sjp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <article>
+                    <div class="text">
+                        <h2 class="article-title">体験レッスンをご希望の方へ──</h2>
+                        <p>教室のLINEを友だち追加していただき、お子さまのお名前と年齢をトークに送信してください。こちらから日程のご案内をさせていただきます♪</p>
+                        <p><span>Piccola Piano</span>（ピッコラピアノ）は、イタリア語で「小さなピアノ」という意味。「小さな手で」「少しずつ」「楽しく」音楽とふれあってほしい。そんな思いをこめて名づけました。
+                        </p>
+                        <p>はじめてのレッスンが、お子さまにとって楽しい音の時間になりますように。どうぞお気軽にご連絡くださいね。</p>
+                    </div>
+                    <a href="https://lin.ee/o9bziWy"><img src="img/btn-line.png" alt="LINE友だち追加"></a>
+                </article>
+            </div>
+        </section>
+        <section id="mi" class="accordion-item">
+            <img src="img/menu-mi.jpg" alt="みんなの様子">
+            <div class="board">
+                <div class="bulletin_board">
+                    <div class="slide-items">
+                        <div><img src="img/sample-1.jpg" alt="生徒1"></div>
+                        <div><img src="img/sample-2.jpg" alt="生徒2"></div>
+                        <div><img src="img/cat.jpg" alt="猫"></div>
+                        <div><img src="img/baby.jpg" alt="ベビーリトミック"></div>
+                    </div>
+                </div>
+                <article>
+                    <div class="text">
+                        <h2 class="article-title">みんなの様子──</h2>
+                        <p>みんなのがんばってる様子を教室のInstagramでも少しずつ紹介していきます♪楽しい写真をどんどんアップしていく予定なので、よかったらのぞいてみてくださいね!</p>
+                    </div>
+                    <a href="#"><img src="img/btn-instagram.png" alt="教室のinstagram"></a>
+                </article>
+            </div>
+        </section>
+        <section id="fa" class="accordion-item">
+            <img src="img/menu-fa.jpg" alt="ファイルのダウンロード">
+            <div class="fails">
+                <div class="fail">
+                    <p>大事なファイル</p>
+                </div>
+                <div class="label">
+                    <div class="experience"><a href="files/trial-file.pdf">体験レッスン用</a></div>
+                    <div class="student"><a href="#">生徒さん用</a></div>
+                </div>
+            </div>
+        </section>
+        <section id="so" class="accordion-item">
+            <img src="img/menu-so.jpg" alt="相談室">
+            <div class="forest-form">
+                <h2>そうだんばこ</h2>
+                <p>「ちょっと聞いてみたいな」そんなときは、ポストにおてがみを入れてね。</p>
+                <form action="your-form-handler" method="post">
+                    <label>お名前（ニックネーム可）
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>ご用件
+                        <select name="topic">
+                            <option value="trial">体験レッスンについて</option>
+                            <option value="join">入会について</option>
+                            <option value="current">在籍生のご相談</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </label>
+                    <label>メッセージ
+                        <textarea name="message" rows="6"></textarea>
+                    </label>
+                    <label>返信方法
+                        <input type="radio" name="reply" value="LINE" checked> LINE
+                        <input type="radio" name="reply" value="email"> メール
+                        <input type="radio" name="reply" value="any"> どちらでも
+                    </label>
+                    <label>メールアドレス（メール希望の方のみ）
+                        <input type="email" name="email">
+                    </label>
+                    <button type="button" class="preview-btn">🐱 猫さんに よみあげてもらう</button>
+                    <div class="preview-box" style="display:none;">
+                        <h3>🐱 猫さんの読みあげ：</h3>
+                        <div class="preview-content"></div>
+                        <button type="button" class="close-preview-btn">🐾 閉じる</button>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="あなたのサイトキー"></div>
+                    <button type="submit" class="submit-btn">おてがみを とどける</button>
+                </form>
+                <div class="thanks-message" style="display: none;">
+                    <p>おてがみをとどけました！<br>森の動物たちが先生におしえてくれるよ 🐿</p>
+                </div>
+            </div>
+        </section>
+        <section id="la" class="accordion-item">
+            <img src="img/menu-la.jpg" alt="ライブラリー">
+            <div class="library">
+                <h2 class="section-title">お手本動画</h2>
+                <ul class="movie">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <a href="#"><img src="img/btn-instagram.png" alt="教室のinstagram"></a>
+            </div>
+        </section>
+        <section id="si" class="accordion-item">
+            <img src="img/menu-si.jpg" alt="お知らせ">
+            <article class="news">
+                <h2 class="section-title">しらせ</h2>
+                <dl>
+                    <a href="#">
+                        <dt>2025.10.10</dt>
+                        <dd>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</dd>
+                    </a>
+                    <a href="#">
+                        <dt>2025.10.10</dt>
+                        <dd>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</dd>
+                    </a>
+                    <a href="#">
+                        <dt>2025.10.10</dt>
+                        <dd>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</dd>
+                    </a>
+                    <a href="#">
+                        <dt>2025.10.10</dt>
+                        <dd>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</dd>
+                    </a>
+                </dl>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <img src="img/footer-pc.jpg" alt="footer">
+        <div class="access">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.7425075983997!2d135.705423825756!3d34.963061922827706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010685b28eab59%3A0x60e66b8154d122bf!2z44Kk44Kq44Oz44Oi44O844Or5Lqs6YO95qGC5bed!5e0!3m2!1sja!2sjp!4v1750334797333!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="text">
+                <article>
+                    <h3 class="access-title">アクセス方法</h3>
+                    <p>最寄り駅はJR「桂川駅」となっており、駅から徒歩圏内です。お車でお越しの場合は、周辺道路の混雑状況や駐停車禁止区域にご留意ください。お車でお越しの際は、イオンモール桂川などの近隣商業施設の駐車場をご利用いただくか、公共交通機関のご利用をおすすめいたします。</p>
+                    <h3 class="access-title">レッスン中の待機場所について</h3>
+                    <p>レッスンの待ち時間には、イオンモールなどの商業施設でお過ごしいただけますと幸いです。安全面の観点から、教室前やマンション敷地内での長時間の待機はご遠慮いただきますよう、何卒ご理解とご協力をお願いいたします。</p>
+                </article>
+            </div>
+        </div>
+        <p class="copy-right">© Piccola Piano</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

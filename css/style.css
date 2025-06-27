@@ -1,0 +1,774 @@
+@charset "UTF-8";
+
+body {
+    width: 100%;
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: #FFFCE8;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+a {
+    display: inline-block;
+    color: #6E4C3A;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+    max-width: 1536px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 45px;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+
+/* header logo */
+#header .site-title img {
+    max-width: 160px;
+    margin-left: 65px;
+}
+
+/* header navi */
+#header nav {
+    margin: 0 auto;
+    max-width: 840px;
+    height: 95px;
+    line-height: 95px;
+    background-color: #F5E8D3;
+    border-radius: 40px;
+}
+
+#header nav ul {
+    display: flex;
+    width: 640px;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+#header nav ul a {
+    font-size: 24px;
+    justify-content: space-around;
+}
+
+#header nav ul a:hover {
+    opacity: 0.7;
+}
+
+/* header sns */
+.header-sns {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #F5E8D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.instagram img {
+    padding-left: 3px;
+    padding-bottom: 3px;
+}
+
+main {
+    margin-top: -152px;
+}
+
+/* main-visual */
+#main-visual {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+    /* 上部を表示 */
+    display: block;
+}
+
+/* piano */
+.piano-container {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+    background-color: #F5E8D3;
+    position: sticky;
+    top: 95px;
+    /* ヘッダーの下に固定 */
+    z-index: 2;
+}
+
+.piano-wrap * {
+    box-sizing: border-box;
+}
+
+.piano-wrap {
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.piano-wrap>div {
+    position: relative;
+}
+
+.white-key {
+    width: calc(100% / 7);
+    height: 940px;
+    background-color: #FFFCE8;
+    border: solid 1px #6E4C3A;
+    border-top: none;
+    z-index: 1;
+    border-bottom: solid rgb(230, 230, 230) 40px;
+    box-shadow: 0 7px 3px 0 rgba(110, 76, 58, 0.3);
+    transition: 100ms;
+    color: black;
+}
+
+.white-key .pressing {
+    border-bottom: solid rgb(230, 230, 230) 5px;
+    border-left: solid rgb(109, 109, 76) 2px;
+    border-right: solid rgb(109, 109, 76) 2px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.black-key {
+    width: 120px;
+    height: 370px;
+    background: linear-gradient(to bottom, rgb(75, 75, 75) 97%, white);
+    margin-left: -60px;
+    margin-right: -60px;
+    z-index: 2;
+    border-bottom: solid rgb(54, 54, 54) 10px;
+    border-left: solid #6E4C3A 3px;
+    border-right: solid #6E4C3A 3px;
+    border-top: none;
+    box-shadow: 5px 1px 2px 0 rgba(0, 0, 0, 0.4);
+    transition: 100ms;
+    color: #FFFCE8;
+    text-align: center;
+}
+
+.black-key .pressing {
+    border-bottom: solid rgb(54, 54, 54) 4px;
+    box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, rgb(24, 24, 24) 100%, white);
+}
+
+/* key-bord menu */
+.white-key {
+    writing-mode: vertical-rl;
+    font-size: 36px;
+    line-height: 1.5;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.white-key span {
+    display: inline-block;
+    transition: transform 1s ease;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    font-size: 24px;
+}
+
+.do,
+.re,
+.mi,
+.fa,
+.so,
+.la,
+.si {
+    padding-top: 500px;
+}
+
+.piano-key a {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.white-key:hover span:nth-child(1) {
+    transform: rotate(0deg);
+    transition-delay: 0s;
+}
+
+.white-key:hover span:nth-child(2) {
+    transform: rotate(0deg);
+    transition-delay: 0.05s;
+}
+
+.white-key:hover span:nth-child(3) {
+    transform: rotate(0deg);
+    transition-delay: 0.1s;
+}
+
+.white-key:hover span:nth-child(4) {
+    transform: rotate(0deg);
+    transition-delay: 0.15s;
+}
+
+.white-key:hover span:nth-child(5) {
+    transform: rotate(0deg);
+    transition-delay: 0.2s;
+}
+
+.white-key:hover span:nth-child(6) {
+    transform: rotate(0deg);
+    transition-delay: 0.25s;
+}
+
+.white-key:hover span:nth-child(7) {
+    transform: rotate(0deg);
+    transition-delay: 0.3s;
+}
+
+.white-key:hover span:nth-child(8) {
+    transform: rotate(0deg);
+    transition-delay: 0.35s;
+}
+
+.white-key:hover span:nth-child(9) {
+    transform: rotate(0deg);
+    transition-delay: 0.4s;
+}
+
+.white-key:hover span:nth-child(10) {
+    transform: rotate(0deg);
+    transition-delay: 0.45s;
+}
+
+.white-key:hover span:nth-child(11) {
+    transform: rotate(0deg);
+    transition-delay: 0.5s;
+}
+
+.white-key:hover span:nth-child(12) {
+    transform: rotate(0deg);
+    transition-delay: 0.55s;
+}
+
+.white-key:hover span:nth-child(13) {
+    transform: rotate(0deg);
+    transition-delay: 0.6s;
+}
+
+.white-key:hover span:nth-child(14) {
+    transform: rotate(0deg);
+    transition-delay: 0.65s;
+}
+
+.white-key:hover span:nth-child(15) {
+    transform: rotate(0deg);
+    transition-delay: 0.7s;
+}
+
+.white-key:hover span:nth-child(16) {
+    transform: rotate(0deg);
+    transition-delay: 0.75s;
+}
+
+/* .accordion-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-item.active {
+    max-height: calc(100vh - 100px); /* footerを隠す目的で制限 */
+/* overflow-y: auto; */
+/* } */
+.accordion-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-top: 1px;
+  box-sizing: border-box;
+}
+
+.accordion-item.active {
+  max-height: 2000px; /* 必要に応じて拡張 */
+  overflow-y: auto;
+}
+.accordion-item img {
+    width: 100%;
+}
+
+#menu {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background: #F5E8D3;
+    /* 必要に応じて背景色 */
+    position: relative;
+    z-index: 1;
+}
+
+/* article */
+.article-title {
+    font-size: 20px;
+    color: #B5D7B7;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #6E4C3A;
+}
+
+article .text {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+article .text span {
+    font-weight: bold;
+    font-family: "Walter Turncoat", cursive;
+}
+
+article a {
+    margin-bottom: 50px;
+}
+
+/* do */
+.article {
+    max-width: 936px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.article article {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#about article img {
+    width: 250px;
+    height: 250px;
+    margin-right: 30px;
+    border-radius: 30%;
+}
+
+/* re */
+.calendar {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.calendar iframe {
+    width: 100%;
+    margin: 50px 0;
+}
+
+/* mi */
+.board {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bulletin_board {
+    width: 100%;
+    height: 415px;
+    border-radius: 20px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    /* 中央揃え */
+    align-items: center;
+    /* 垂直中央揃え */
+    position: relative;
+    overflow: hidden;
+    /* slickの変なはみ出し防止 */
+    background:
+        linear-gradient(90deg,
+            rgba(208, 147, 82, 0.6),
+            rgba(192, 134, 70, 0.6) 60%,
+            rgba(208, 147, 82, 0.6)),
+        repeating-radial-gradient(ellipse at 60% 500%,
+            #c08646,
+            #c08646 0.2%,
+            #d09352 0.6%,
+            #d09352 1%);
+}
+
+.slide-items {
+    width: 80%;
+    /* 幅を適度に */
+    max-width: 600px;
+}
+
+.slide-items img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    /* または例：300px 固定でもOK */
+    max-height: 100%;
+    border: 10px solid white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: 30px solid white;
+    object-fit: cover;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    font-size: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+    background: url("../img/dots.png") no-repeat center center !important;
+    background-size: contain !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0 !important;
+}
+
+.slick-dots li.slick-active button {
+    opacity: 1 !important;
+    transform: scale(1.2) !important;
+}
+
+.slick-dots li button:before {
+    content: none !important;
+    display: none !important;
+}
+
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    /* テキストを見えなくする */
+}
+
+/* fa */
+.fails {
+    position: relative;
+    width: 960px;
+    height: 630px;
+    margin: 0 auto;
+}
+
+.fail {
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+    background: linear-gradient(135deg, rgba(152, 255, 152, 0.4), rgba(255, 255, 255, 0.2));
+    border: 1px solid rgba(152, 255, 152, 0.7);
+    border-radius: 20px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fail p {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 350px;
+}
+
+/* 付箋　.label を右上に浮かせて縦並び */
+.label {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    /* 横並びに変更 */
+    gap: 10px;
+    /* 間隔10px */
+    z-index: 10;
+}
+
+/* 各付箋のスタイル：大きめ＋文字も見やすく */
+.label .experience,
+.label .student {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 16px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgba(152, 255, 152, 0.6);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(2deg);
+    /* 少し傾けると可愛い */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* ホバー時：浮き上がる感じ */
+.label .experience:hover,
+.label .student:hover {
+    transform: rotate(0deg) translateY(-2px);
+}
+
+/* リンク全体クリック可能に */
+.label a {
+    color: #3e7c6f;
+    text-decoration: none;
+    display: block;
+}
+
+/* so */
+.forest-form {
+    background: #f9fefb;
+    border: 3px dashed #b2d8b2;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.forest-form h2 {
+    text-align: center;
+    color: #4d774e;
+    font-size: 28.8px;
+}
+
+.forest-form p {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: #555;
+}
+
+.forest-form label {
+    display: block;
+    margin-bottom: 19.2px;
+    font-weight: bold;
+    color: #333;
+}
+
+.forest-form input[type="text"],
+.forest-form input[type="email"],
+.forest-form select,
+.forest-form textarea {
+    width: 100%;
+    padding: 11.2px;
+    border: 2px solid #cce3cc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    margin-top: 6.4px;
+}
+
+.forest-form textarea {
+    resize: vertical;
+}
+
+.forest-form input[type="radio"] {
+    margin-right: 6.4px;
+}
+
+.submit-btn {
+    display: block;
+    margin: 32px auto;
+    padding: 12.8px 32px;
+    background-color: #a1d1a1;
+    border: none;
+    border-radius: 12px;
+    font-size: 19.2px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8bc78b;
+}
+
+.preview-box {
+    background-color: #f0f9f0;
+    border: 2px solid #b2d8b2;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.preview-btn {
+    margin-top: 16px;
+    background-color: #ffe7d1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-preview-btn {
+    margin-top: 16px;
+    background-color: #ddd;
+    border: none;
+    padding: 6.4px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-preview-btn:hover {
+    background-color: #ccc;
+}
+
+/* la */
+.library {
+    max-width: 880px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.movie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.section-title {
+    color: #B5D7B7;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* si */
+.news {
+    width: 762px;
+    margin: 50px auto 50px;
+    text-align: center;
+}
+
+.news a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+.news a:hover {
+    opacity: 0.6;
+}
+
+.news dt {
+    width: 30%;
+}
+
+.news dd {
+    width: 70%;
+}
+
+.news dt,
+.news dd {
+    padding: 35px 0;
+    border-bottom: 1px solid #6E4C3A;
+}
+
+/* footer */
+#footer {
+    position: relative;
+}
+
+#footer img {
+    width: 100%;
+}
+
+.access {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 252, 232, 0.8);
+    width: 960px;
+    height: 433px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.access iframe {
+    width: 430px;
+    height: 285px;
+    margin-right: 35px;
+}
+
+.access .text {
+    width: 420px;
+    height: 305px;
+    text-align: left;
+    align-items: center;
+}
+
+.access .text .access-title {
+    padding: 10px 25px;
+    margin-bottom: 18px;
+    background-color: #FFFCE8;
+    color: #D68748;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.access .text p {
+    color: #6E4C3A;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+#footer .copy-right {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFCE8;
+    font-size: 12px;
+}
