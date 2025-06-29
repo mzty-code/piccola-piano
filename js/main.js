@@ -21,25 +21,33 @@ $(document).ready(function () {
 
   // slick初期化
   if ($('.slide-items').length) {
-    $('.slide-items').slick({
-      centerMode: true,
-      centerPadding: '0px',
-      slidesToShow: 1,
-      arrows: false,  // 矢印を非表示にしたいならここを false に
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      speed: 800,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            centerPadding: '40px',
-          }
+  $('.slide-items').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    arrows: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 800,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '40px',
+          centerMode: true
         }
-      ]
-    });
-  }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          centerMode: false,
+          centerPadding: '0px'
+        }
+      }
+    ]
+  });
+}
 
 
   $(document).ready(function() {
