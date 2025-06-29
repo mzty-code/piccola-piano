@@ -723,20 +723,24 @@ article a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px 20px 150px;
+    padding: 150px 20px 200px;  /* ← ← ← ここの padding を十分に取る！ */
+    overflow: hidden; /* はみ出し対策 */
+    z-index: 0;
     /* 上に空間を作っておくと .access が被らず収まる */
 }
  .access {
-    position: relative;
+    margin: 0 auto;
+    margin-top: 100px; /* ← 背景画像中央に近づける */
     background-color: rgba(255, 252, 232, 0.8);
     max-width: 850px;
-    margin: 80px auto;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     border-radius: 25px;
+    position: relative;
     z-index: 1;
 }
 
@@ -886,12 +890,12 @@ article a {
     /* footer */
     #footer {
         background-image: url("../img/footer-sp.png");
-        padding: 50px 15px 100px;
+        padding: 100px 15px 150px;
     }
      .access {
         flex-direction: column;
         padding: 30px;
-        margin: 80px auto;
+        margin-top: 100px;
     }
 
     .access iframe,
