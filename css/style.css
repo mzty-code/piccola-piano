@@ -718,39 +718,30 @@ article a {
 #footer {
     position: relative;
     max-width: 1536px;
+    margin: 0 auto;
+    background-image: url("../img/footer-pc.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px 150px;
+    /* 上に空間を作っておくと .access が被らず収まる */
 }
-
-#footer .footer-pc {
-    width: 100%;
-}
-
-#footer .footer-sp {
-    display: none;
-}
-
-.footer-sns {
-    display: none;
-}
-
-.access {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ .access {
+    position: relative;
     background-color: rgba(255, 252, 232, 0.8);
     max-width: 850px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    border-radius: 25px;
+    margin: 80px auto;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 25px;
+    z-index: 1;
 }
 
 .access iframe {
-    width: 50%;
+    width: 70%;
     height: 285px;
     margin-right: 35px;
 }
@@ -759,7 +750,7 @@ article a {
     width: 50%;
     height: 305px;
     text-align: left;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 .access .text .access-title {
@@ -893,36 +884,32 @@ article a {
     }
 
     /* footer */
-    #footer .footer-pc {
-        display: none;
+    #footer {
+        background-image: url("../img/footer-sp.png");
+        padding: 50px 15px 100px;
     }
-
-    #footer .footer-sp {
-        display: block;
-    }
-
-    .access {
-        transform: translate(-50%, -40%);
+     .access {
         flex-direction: column;
-        align-items: center;
-        height: 70%;
-        width: 80%;
-        padding: 0 20px;
+        padding: 30px;
+        margin: 60px auto;
     }
 
-    .access iframe {
+    .access iframe,
+    .access .text {
         width: 100%;
-        margin-right: 0;
+        margin: 0;
+        height: auto;
     }
 
     .access .text {
-        width: 100%;
-        margin-top: 30px;
-        margin-bottom: 0;
+        margin-top: 20px;
     }
 
-    .access .text p {
-        font-size: 12px;
+    .copy-right {
+        text-align: center;
+        position: static;
+        margin-top: 20px;
+        transform: none;
     }
 }
 
