@@ -149,7 +149,7 @@ main {
     justify-content: center;
 }
 
-.piano-wrap>div {
+.piano-wrap>a {
     position: relative;
 }
 
@@ -163,7 +163,7 @@ main {
     border-bottom: solid rgb(230, 230, 230) 40px;
     box-shadow: 0 7px 3px 0 rgba(110, 76, 58, 0.3);
     transition: 100ms;
-    color: black;
+    /* color: black; */
 }
 
 .white-key .pressing {
@@ -224,7 +224,7 @@ main {
     padding-top: 500px;
 }
 
-.piano-key a {
+.piano {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -329,7 +329,7 @@ main {
 }
 
 #menu {
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     z-index: 1;
     background: #F5E8D3;
@@ -723,14 +723,18 @@ article a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 150px 20px 200px;  /* ← ← ← ここの padding を十分に取る！ */
-    overflow: hidden; /* はみ出し対策 */
+    padding: 150px 20px 200px;
+    /* ← ← ← ここの padding を十分に取る！ */
+    overflow: hidden;
+    /* はみ出し対策 */
     z-index: 0;
     /* 上に空間を作っておくと .access が被らず収まる */
 }
- .access {
+
+.access {
     margin: 0 auto;
-    margin-top: 100px; /* ← 背景画像中央に近づける */
+    margin-top: 100px;
+    /* ← 背景画像中央に近づける */
     background-color: rgba(255, 252, 232, 0.8);
     max-width: 850px;
     width: 100%;
@@ -892,7 +896,8 @@ article a {
         background-image: url("../img/footer-sp.png");
         padding: 100px 15px 150px;
     }
-     .access {
+
+    .access {
         flex-direction: column;
         padding: 30px;
         margin-top: 100px;
@@ -946,7 +951,7 @@ article a {
         gap: 12px;
     }
 
-    .white-key a {
+    .white-key {
         font-size: 20px;
     }
 
@@ -991,13 +996,60 @@ article a {
     }
 
     /* piano menu */
-    .white-key a {
+    .white-key {
         font-size: 16px;
+        height: 500px;
+    }
+
+    .black-key {
+        height: 200px;
     }
 
     .white-key span {
         font-size: 16px;
     }
+
+    /* キーの高さを調整 */
+    .do,
+    .re,
+    .mi,
+    .fa,
+    .so,
+    .la,
+    .si {
+        padding-top: 250px;
+
+    }
+
+    /* footer */
+    #footer {
+        padding: 80px 15px 120px;
+    }
+
+    .access {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .access iframe,
+    .access .text {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .access .text {
+        margin-top: 20px;
+    }
+
+    .copy-right {
+        text-align: center;
+        position: static;
+        margin-top: 20px;
+        transform: none;
+    }
+}
 }
 
 @media (max-width: 420px) {
