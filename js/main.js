@@ -19,29 +19,36 @@ $(function () {
 
 
   $(document).ready(function () {
-    // 鍵盤クリックでアコーディオン開く＋スクロール
-    $('.piano-key,.about-do a').on('click', function (e) {
+    $('.accordion-item').hide(); // 初期状態で非表示
+
+    $('.piano-key, .about-do a').on('click', function (e) {
       e.preventDefault();
-      const targetId = $(this).attr('href').replace('#', '');
-      const $target = $('#' + targetId);
 
-      $('.accordion-item').removeClass('active');
+      const $clicked = $(this);
+      const targetId = $clicked.attr('href');
+      const $target = $(targetId);
 
-      setTimeout(function () {
 
-        $target.addClass('active');
-      }, 1000);
+      // すでに開いていて、active もついているなら何もしない（＝連続クリック防止）
+      if ($target.is(':visible') && $clicked.hasClass('active')) {
+        return;
+      }
 
-      // $('html, body').animate({
-      //   scrollTop: $target.offset().top - 80
-      // }, 500);
-    });
+      // 他のアコーディオンは即座に非表示
+      $('.accordion-item').not($target).hide();
+      $('.piano-key, .about-do a').removeClass('active');
 
-    // ヘッダーのmenuクリックで全部閉じる
-    $('#header-navi a[href="#menu"]').on('click', function () {
-      $('.accordion-item').removeClass('active');
+      // 対象を開いてスクロール
+      $target.slideDown(300, function () {
+        $('html, body').animate({
+          scrollTop: $target.offset().top - 50
+        }, 300);
+      });
+
+      $clicked.addClass('active');
     });
   });
+
 
   // slick初期化
   if ($('.slide-items').length) {
