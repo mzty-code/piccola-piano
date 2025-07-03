@@ -975,6 +975,11 @@ article a {
         margin: 0 auto;
     }
 
+    /* la */
+    .movie {
+    gap: 20px;
+}
+
 }
 
 @media(max-width:550px) {
