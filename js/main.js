@@ -143,4 +143,11 @@ $(function () {
       $(this).trigger("reset");
     });
   });
+
+  jQuery(document).ready(function ($) {
+    $(document).on('wpcf7mailsent', function (event) {
+      $('.thanks-message').fadeIn(); // 表示にアニメーションを加えるなら fadeIn()
+    });
+  });
+
 });

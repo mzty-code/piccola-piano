@@ -21,6 +21,15 @@ a {
 li {
     list-style: none;
 }
+form input,
+form select,
+form textarea,
+form button,
+form input[type="submit"] {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1rem;
+}
+
 
 #header {
     max-width: 1536px;
@@ -680,12 +689,17 @@ article a {
 .news {
     max-width: 762px;
     margin: 50px auto 50px;
-    text-align: center;
+    text-align: left;
+}
+.news dl {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .news a {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 0;
     font-size: 20px;
@@ -697,15 +711,15 @@ article a {
 
 .news dt {
     width: 30%;
+    color: #6E4C3A;
 }
-
-.news dd {
+.news dd{
     width: 70%;
 }
 
 .news dt,
 .news dd {
-    padding: 35px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #6E4C3A;
 }
 
